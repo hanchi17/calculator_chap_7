@@ -28,24 +28,21 @@ class Control:
         return a*b
     
     def div(self, a, b):
+        try:
+            if(b==0):
+                raise Exception("Divisor Error")
+            
+        except Exception as e:
+            return e
+        
         return a/b
     
     def pow(self, a, b):
         try:
            if (a==0):
                 raise Exception("Base Error")
-<<<<<<< HEAD
             
         except Exception as e:
             return e
         
-        return pow(a, b)   
-    
-        return pow(a, b)
-=======
-           
-        except Exception as e:
-            return e
-        
-        return pow(a, b)
->>>>>>> 93d867e (modify pow function using exception)
+        return pow(a, b) 
